@@ -1,0 +1,171 @@
+@mixin row-bt{
+	display: flex;
+	display:-webkit-flex;
+	display:-moz-flex;
+	display:-o-flex;
+	flex-flow:wrap row;
+	justify-content:space-between;
+	align-items:center;
+}
+
+@mixin row-ct{
+	display: flex;
+	display:-webkit-flex;
+	display:-moz-flex;
+	display:-o-flex;
+	flex-flow:wrap row;
+	justify-content:center;
+	align-items:center;
+}
+
+@mixin row-st{
+	display: flex;
+	display:-webkit-flex;
+	display:-moz-flex;
+	display:-o-flex;
+	flex-flow:wrap row;
+	justify-content:flex-start;
+	align-items:center;
+}
+
+@mixin col-ct{
+	display: flex;
+	display:-webkit-flex;
+	display:-moz-flex;
+	display:-o-flex;
+	flex-flow:wrap column;
+	justify-content:center;
+	align-items:center;
+}
+
+@mixin col-end{
+	display: flex;
+	display:-webkit-flex;
+	display:-moz-flex;
+	display:-o-flex;
+	flex-flow:wrap column;
+	justify-content:center;
+	align-items: flex-end;
+}
+
+@mixin col-lend{
+	display: flex;
+	display:-webkit-flex;
+	display:-moz-flex;
+	display:-o-flex;
+	flex-flow:wrap column;
+	justify-content:flex-end;
+	align-items: initial;
+}
+
+@mixin col-st{
+	display: flex;
+	display:-webkit-flex;
+	display:-moz-flex;
+	display:-o-flex;
+	flex-flow:wrap column;
+	justify-content:center;
+	align-items: flex-start;
+}
+
+@mixin row-ar{
+	display: flex;
+	display:-webkit-flex;
+	display:-moz-flex;
+	display:-o-flex;
+	flex-flow:wrap row;
+	justify-content:space-around;
+	align-items:center;
+}
+
+::selection {
+	background-color: #7d8edc;
+	color: whitesmoke;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+//Font size resets
+
+h1{
+	font-size:4rem;
+}
+
+h2{
+	font-size:1.5rem;	
+}
+h3{
+	font-size:2.25rem;
+}
+h4{
+	font-size:1.125rem;	
+}
+
+h5{
+	font-size:1rem;	
+}
+
+p{
+	font-size:1rem;	
+}
+
+//Colors palete
+
+$cele: #0ad4fa;
+$black: #616161;
+$black2: #3c3c3c;
+$gray: #a3a3a3;
+$gray2: #d9d9d9;
+$white-bg: #f9f9f9;
+$gray-bg: #ededed;
+$white: #ffffff;
+
+// Buttons
+
+.btn{
+	background: $gray-bg;
+	@include row-ct;
+	padding: 0.5rem 1rem;
+	border-radius: 100px;
+	color:$gray;
+	transition:all .2s ease-out;
+    border: none;
+    cursor: pointer;
+    outline:none;
+	&.btn-active{
+		background: $cele;
+		color:$white;
+		&:hover{
+			background: #5dd9f1;
+		}
+	}
+	&.btn-light{
+		&:hover{
+			background: #f3f3f3;
+			color: #656565;
+		}
+	}
+}
+
+.arrow-icon{
+	border:1px solid $gray;
+	color:$gray;
+	border-radius: 100%;
+	font-size: 1.6rem;
+	padding: 0.5rem;
+	transition:all .2s ease-out;
+	&:hover{
+		color:$cele;
+		border-color:$cele;
+	}
+}
+
+.arrow-resp{
+	display: none;
+}
