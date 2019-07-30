@@ -108,16 +108,21 @@ h4{
 }
 
 h5{
-	font-size:1rem;	
+	font-size:0.9rem;	
 }
 
+h6{
+	font-size:0.8rem;
+}
 p{
 	font-size:1rem;	
 }
 
+
 //Colors palete
 
-$cele: #0ad4fa;
+$cele: #30cfe4;
+$cele2: #0ebbd2;
 $black: #616161;
 $black2: #3c3c3c;
 $gray: #a3a3a3;
@@ -126,14 +131,16 @@ $white-bg: #f9f9f9;
 $gray-bg: #ededed;
 $white: #ffffff;
 
+
+
 // Buttons
 
 .btn{
-	background: $gray-bg;
+	background: #dcdcdc;
 	@include row-ct;
-	padding: 0.5rem 1rem;
-	border-radius: 100px;
-	color:$gray;
+	padding: 0.7rem 2rem;
+	border-radius: 3px;
+	color:rgb(90,90,90);
 	transition:all .2s ease-out;
     border: none;
     cursor: pointer;
@@ -168,4 +175,18 @@ $white: #ffffff;
 
 .arrow-resp{
 	display: none;
+}
+
+// Resets
+
+input[type="text"]{
+	outline: none;
+}
+
+a{
+	color:$cele2;
+	transition: all .2s ease-out;
+	&:hover{
+		color:$cele;
+	}
 }
