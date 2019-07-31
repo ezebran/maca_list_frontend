@@ -3,7 +3,7 @@
 body{
 	font-family: 'Source Sans Pro', sans-serif;
 	font-size:16px;
-	background: $white-bg;
+	background: #f0f0f0;
 }
 
 .auth{
@@ -33,13 +33,6 @@ body{
 		    color: rgb(85,85,85);
 		    margin: 0.25em 0;
 	    }
-	    input[type="text"]{
-			width: 100%;
-		    margin-bottom: 1.5em;
-		    border: none;
-		    background: rgb(255,255,255);
-		    padding: 0.75em;
-	    }
 	    .auth-foot{
 	    	@include row-bt;
 	    	width: 100%;
@@ -53,5 +46,129 @@ body{
 	    		}
 	    	}
 	    }
+	}
+}
+
+header{
+	@include row-bt;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+	padding:0.5em 2em;
+	background: $white-bg;
+	border-bottom:1px solid rgb(190,190,190);
+	img{
+		width: 8em;
+	}
+	h5{
+		font-weight: 400;
+		color:$black2;
+	}
+}
+
+.home{
+	min-height: 100vh;
+	@include col-end;
+	position: relative;
+	main{
+		min-height: 100vh;
+    	width: calc(100% - 19em);
+    	padding: 2em;
+        background: #f9f9f9;
+        margin:5em 2em 0;
+        border:1px solid rgb(190,190,190);
+        border-radius: 4px;
+    	@include col-st3;
+    	h1{
+    		color:$black2;
+    		margin-bottom: 0.5em;
+    	}
+    	table{
+    		width: 100%;
+    		border-collapse: collapse;
+    		thead{
+    			background: #e6e6e6;
+    			tr{
+    				th{
+    					font-weight: 600;
+    					color:$black;
+    				    padding: 7px 0 7px 12px;
+    				    text-align: left;
+    				}
+    			}
+    		}
+    		tbody{
+    			tr{
+    				border-bottom: 1px solid rgb(190,190,190);
+    				td{
+    					font-weight: 400;
+    					color:$black;
+    				    padding: 12px;
+    				    .i-delete{
+    				    	color: #f44336;
+    				    	&:hover{
+    				    		color:#e57373;
+    				    	}
+    				    }
+    				}
+    				&:last-child{
+    					border-bottom: none;
+    				}
+    			}
+    		}
+    	}
+	}
+}
+
+.modal{
+	position: absolute;
+    z-index: 99999999;
+    width: 100%;
+    height: 100vh;
+    background: rgba(150,150,150,0.2);
+    @include col-ct;
+    .content-modal{
+	    width: 22em;
+	    background: white;
+	    padding: 2em;
+	    border-radius: 4px; 
+		@include col-ct;
+    	.btn-foot{
+    		@include row-ar;
+    	    width: 100%;
+    	}
+    	h3{
+    		color:$black2;
+    		margin-bottom:0.5em;
+    		text-align: center;
+    	}
+    }
+}
+
+aside{
+	background: $white-bg;
+	width: 15em;
+	z-index: 999;
+	position: fixed;
+	top: 47.84px;
+	min-height: 100vh;
+	border-right:1px solid rgb(190,190,190);
+	@include col-st2;
+	padding:2em;
+	ul{
+		li{
+			margin:1.5em 0;
+			a{
+				color:#7c92a7;
+				font-weight: 600;
+				font-size:0.85rem;
+				span{
+					position: relative;
+					top:3px;
+					font-size:1rem;
+					padding-right: 0.75em;
+				}
+			}
+		}
 	}
 }

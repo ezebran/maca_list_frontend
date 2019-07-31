@@ -68,6 +68,26 @@
 	align-items: flex-start;
 }
 
+@mixin col-st2{
+	display: flex;
+	display:-webkit-flex;
+	display:-moz-flex;
+	display:-o-flex;
+	flex-flow:wrap column;
+	justify-content:flex-start;
+	align-items: flex-start;
+}
+
+@mixin col-st3{
+	display: flex;
+	display:-webkit-flex;
+	display:-moz-flex;
+	display:-o-flex;
+	flex-flow:wrap column;
+	justify-content:flex-start;
+	align-items: center;
+}
+
 @mixin row-ar{
 	display: flex;
 	display:-webkit-flex;
@@ -126,7 +146,7 @@ $cele2: #0ebbd2;
 $black: #616161;
 $black2: #3c3c3c;
 $gray: #a3a3a3;
-$gray2: #d9d9d9;
+$gray2: rgb(230,230,230);
 $white-bg: #f9f9f9;
 $gray-bg: #ededed;
 $white: #ffffff;
@@ -179,8 +199,17 @@ $white: #ffffff;
 
 // Resets
 
-input[type="text"]{
-	outline: none;
+.tx-center{
+	text-align: center;
+}
+
+.auth-input{
+	width: 100%;
+    margin-bottom: 1.5em;
+    border: none;
+    background: rgb(255,255,255);
+    padding: 0.75em;
+    outline: none;
 }
 
 a{
